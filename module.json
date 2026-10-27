@@ -1,0 +1,33 @@
+{
+  "id": "babel-terminal-integration",
+  "title": "Babel — Terminal Integration",
+  "description": "Terminal de Babel com correio, decifração e importação opcional de 103 documentos do mundo. Novos arquivos permanecem pendentes e sem acesso dos jogadores.",
+  "version": "0.7.1",
+  "url": "https://github.com/No991-GDEV/babel-terminal-integration",
+  "manifest": "https://github.com/No991-GDEV/babel-terminal-integration/releases/latest/download/module.json",
+  "download": "https://github.com/No991-GDEV/babel-terminal-integration/releases/download/v0.7.1/babel-terminal-integration.zip",
+  "readme": "MASTER-GUIDE.md",
+  "changelog": "https://github.com/No991-GDEV/babel-terminal-integration/blob/main/CHANGELOG.md",
+  "bugs": "https://github.com/No991-GDEV/babel-terminal-integration/issues",
+  "compatibility": {
+    "minimum": "14.365",
+    "verified": "14.367",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Babel — After Ashes"
+    }
+  ],
+  "esmodules": [
+    "scripts/foundry.js"
+  ],
+  "styles": [
+    "styles/terminal.css",
+    "styles/ui-refinement.css",
+    "styles/pc-terminal.css",
+    "styles/retro-workstation.css",
+    "styles/station-effects.css"
+  ],
+  "socket": true
+}

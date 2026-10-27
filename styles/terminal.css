@@ -1,0 +1,76 @@
+@font-face{font-family:'Babel Plex';src:url('../assets/fonts/IBMPlexMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+.babel-journal-tools{box-sizing:border-box;display:flex;flex:0 0 auto;align-items:center;height:32px;min-height:32px;padding:0 8px;margin:0;line-height:normal}
+.directory .directory-item.babel-internal-journal{display:none!important}
+.babel-journal-tools>.babel-journal-launch{box-sizing:border-box;display:block;flex:1 1 auto;width:100%;min-width:0;height:32px;min-height:32px;max-height:32px;margin:0;padding:0 8px;font-size:13px;line-height:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#d4b081;border:1px solid #68715b;border-radius:4px;background:#18221b}
+@font-face{font-family:'Babel Plex';src:url('../assets/fonts/IBMPlexMono-Medium.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+.babel-preview{margin:0;background:#090c0d;color:#d8cfbd;font-family:'Babel Plex',Consolas,monospace;min-height:100vh;background-image:radial-gradient(ellipse at 50% 30%,#24211b 0,transparent 65%)}
+.demo-banner{display:flex;gap:22px;align-items:center;padding:12px 24px;font:12px system-ui;color:#b4b9b8;background:#101717;border-bottom:1px solid #34403a;flex-wrap:wrap}.demo-banner b{color:#d7b984;letter-spacing:.1em}.demo-banner select{background:#16201e;color:#e1ddd1;padding:5px;border:1px solid #657268}.babel-preview #app{max-width:1240px;margin:28px auto;padding:0 20px 28px}
+.babel-terminal{--accent:#d4b081;--dim:#888c80;color:#d9d7c7;background:#0d1110;border:1px solid #766b55;box-shadow:0 0 0 5px #1e2522,0 0 0 7px #373c35,0 20px 80px #000a;border-radius:5px;font:14px/1.65 Consolas,'Courier New',monospace;position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;min-height:600px;height:76vh}
+.babel-terminal *{box-sizing:border-box}.babel-terminal button,.babel-terminal input,.babel-terminal textarea,.babel-terminal select{font:inherit;color:inherit;border-radius:0}.babel-terminal button{background:transparent;border:1px solid #454a3d;padding:7px 12px;cursor:pointer;box-shadow:none}.babel-terminal button:hover,.babel-terminal button:focus-visible{border-color:var(--accent);color:var(--accent);background:#c1ad7820}.babel-terminal input,.babel-terminal textarea,.babel-terminal select{background:#101713;border:1px solid #525746;padding:8px;min-width:0}.babel-terminal a{color:var(--accent)}
+.babel-terminal .bt-top{background:#20271f;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;color:var(--accent);letter-spacing:.15em;font-size:12px;border-bottom:2px solid var(--accent)}
+.babel-terminal .bt-top small{letter-spacing:.04em;color:#a4ad9c}.babel-terminal .bt-body{display:grid;grid-template-columns:220px 1fr;min-height:0;flex:1}.babel-terminal.cli .bt-body{grid-template-columns:1fr}.babel-terminal.cli .bt-sidebar,.babel-terminal.cli .bt-toolbar{display:none}
+.babel-terminal .bt-sidebar{padding:26px 16px;background:#111814;border-right:1px solid #343c30;display:flex;flex-direction:column;gap:8px}.babel-terminal .bt-sidebar p{font-size:11px;letter-spacing:.18em;color:var(--dim);margin:0 0 10px}.babel-terminal .bt-sidebar button{text-align:left;font-size:12px}.babel-terminal .bt-sidebar .bt-spacer{flex:1}.babel-terminal .bt-sidebar small{color:#8e9587;font-size:11px}
+.babel-terminal .bt-content{overflow-y:auto;min-height:0;padding:28px 40px;scrollbar-color:#5c604d #101510;scrollbar-width:thin;background:radial-gradient(ellipse at 80% 0,#35422a25,transparent 65%)}
+.babel-terminal .bt-brand{display:flex;align-items:center;gap:28px;border-bottom:1px solid #49503c;padding:4px 0 22px;margin-bottom:24px}.babel-terminal .bt-mark{white-space:pre;font:11px/1.1 monospace;color:var(--accent);margin:0}.babel-terminal .bt-brand h1{font:700 clamp(24px,4vw,44px)/1.1 Consolas,monospace;letter-spacing:.12em;color:var(--accent);margin:0 0 10px}.babel-terminal .bt-brand p{font-size:10px;letter-spacing:.15em;margin:0;color:#a9ac96}.babel-terminal h2{font-size:20px;font-weight:normal;color:#ece5cf;line-height:1.4;margin:0 0 18px}.babel-terminal h3{font-size:14px;color:var(--accent)}.babel-terminal .bt-label{font-size:10px;color:var(--accent);letter-spacing:.17em;margin-bottom:10px}
+.babel-terminal .bt-output{max-width:900px}.babel-terminal .bt-output p{line-height:1.85;margin:0 0 19px}.babel-terminal .bt-output pre{white-space:pre-wrap;font:inherit;overflow-wrap:anywhere}.babel-terminal .bt-output .bt-muted{color:#9ca38f;font-size:12px}.babel-terminal .bt-output img{display:block;max-width:100%;max-height:420px;object-fit:contain;margin:20px auto;background:#c2c4b3;border:1px solid #4b503d}.babel-terminal .bt-output .bt-file{display:flex;gap:15px;align-items:center;padding:11px 0;border-bottom:1px solid #333c2e}.babel-terminal .bt-file span{color:var(--dim);font-size:11px}.babel-terminal .bt-file button{border:0;text-align:left;flex:1;color:var(--accent)}
+.babel-terminal .bt-toolbar{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}.babel-terminal .bt-command{border-top:1px solid #596148;background:#131b13;padding:14px 24px;display:flex;align-items:center;gap:12px;flex:none}.babel-terminal .bt-command label{font-size:12px;color:var(--accent);white-space:nowrap}.babel-terminal .bt-command input{border:none;background:transparent;flex:1;outline:none;padding:4px;width:100%;color:#eee7cb;box-shadow:none}.babel-terminal .bt-command:focus-within{box-shadow:inset 3px 0 var(--accent)}.babel-terminal .bt-bottom{padding:6px 22px;font-size:10px;background:#20271f;color:#a9b299;display:flex;justify-content:space-between;letter-spacing:.05em}
+.babel-terminal .bt-history{font-size:11px;color:#929c88;margin-bottom:14px;border-left:2px solid #4c593d;padding-left:12px;white-space:pre-wrap}.babel-terminal .bt-message{color:var(--accent);white-space:pre-wrap;border-left:2px solid var(--accent);padding-left:14px}.babel-terminal form.bt-form{display:grid;gap:12px;max-width:680px}.babel-terminal .bt-form label{display:grid;gap:4px;font-size:12px;color:var(--accent)}.babel-terminal .bt-form textarea{resize:vertical;min-height:155px;color:#e1decf}.babel-terminal .bt-form button{justify-self:start}.babel-terminal .bt-form .bt-row{display:flex;gap:10px;align-items:center}.babel-terminal .bt-form input[type=checkbox]{width:18px;height:18px}.babel-terminal .bt-form input[type=range]{width:180px}.babel-terminal .bt-form input[type=color]{height:40px}.babel-terminal .bt-error{color:#edab8b}
+.babel-terminal.fx::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:5;opacity:.18;background:repeating-linear-gradient(transparent 0,transparent 3px,#0009 4px)}.babel-terminal .bt-cursor{color:var(--accent);animation:bt-blink 1.1s steps(1) infinite}.babel-terminal.reduce .bt-cursor{animation:none}.babel-terminal .bt-pilot{padding:8px 12px;border:1px solid #746144;font-size:11px;color:#d8bc85;margin-bottom:20px}@keyframes bt-blink{50%{opacity:0}}
+.babel-foundry-window .window-content{padding:8px;overflow:hidden;background:#111713}.babel-foundry-window .babel-terminal{height:100%;min-height:0;box-shadow:none}.babel-foundry-window{min-width:640px;min-height:500px}
+@media(max-width:750px){.babel-terminal .bt-body{grid-template-columns:1fr}.babel-terminal .bt-sidebar{display:none}.babel-terminal .bt-content{padding:22px}.babel-terminal .bt-brand{gap:12px}.babel-terminal .bt-mark{font-size:8px}.babel-terminal .bt-top{padding:8px 12px;letter-spacing:.05em}.babel-terminal .bt-command{padding:12px}.demo-banner{gap:8px}.babel-terminal{height:80vh}}
+@media(prefers-reduced-motion:reduce){.babel-terminal .bt-cursor{animation:none}.babel-terminal.fx::after{display:none}}
+
+/* Scoped finishing pass: clearer prose, calmer frame, consistent controls. */
+.babel-terminal{font-family:'Babel Plex',Consolas,monospace;font-size:var(--terminal-font-size,15px);--dim:#a0a494;border-color:#677164;box-shadow:0 0 0 4px #1c231f,0 0 0 5px #465046,0 20px 65px #0008}
+.babel-terminal .bt-top{background:linear-gradient(90deg,#252f27,#151c18);border-bottom-width:1px;padding:13px 22px}
+.babel-terminal .bt-brand h1{font-family:'Babel Plex',Consolas,monospace;font-weight:500;letter-spacing:.16em}
+.babel-terminal .bt-brand{padding-bottom:25px;border-bottom-color:#3f4b3e}
+.babel-terminal h2{font-weight:500;font-size:1.4em;letter-spacing:-.035em}
+.babel-terminal .bt-output p{line-height:1.8;max-width:76ch}
+.babel-terminal .bt-sidebar{background:linear-gradient(180deg,#141d17,#0e1612)}
+.babel-terminal .bt-sidebar button{padding:10px 9px;letter-spacing:.015em;border-color:#303e32}
+.babel-terminal .bt-sidebar button:hover{background:#bbae7612}
+.babel-terminal .bt-file{gap:20px!important;padding:14px 0!important}
+.babel-terminal .bt-file button{line-height:1.6}
+.babel-terminal .bt-file small{font-size:11px;color:#a3b29c}
+.babel-terminal .bt-label{font-size:11px;letter-spacing:.12em}
+.babel-terminal .bt-output .bt-muted{font-size:12px;color:#a4b09b}
+.babel-terminal input:focus-visible,.babel-terminal textarea:focus-visible,.babel-terminal select:focus-visible{outline:1px solid var(--accent);outline-offset:2px}
+.babel-terminal button:disabled{opacity:.5;cursor:wait}
+.babel-terminal fieldset{border:1px solid #3f4b3c;display:grid;gap:8px;padding:14px}
+.babel-terminal legend{color:var(--accent);padding:0 8px;font-size:12px}
+.babel-terminal code{font:inherit;color:var(--accent);background:#29352680;padding:1px 5px}
+.babel-terminal .bt-spec{display:grid;grid-template-columns:120px 1fr;gap:8px 20px;font-size:12px;margin:24px 0}
+.babel-terminal .bt-spec dt{color:#98aa93}.babel-terminal .bt-spec dd{margin:0;color:#d8dccb}
+.babel-terminal .bt-cipher{color:#9dad90;font-size:12px!important;line-height:1.9!important;background:#070e0b;border:1px solid #364232;padding:20px;max-height:240px;overflow:auto}
+.babel-terminal .bt-recovered{background:#213b242f;border:1px solid #7b9964;padding:20px;color:#d5e8c4;overflow-wrap:anywhere}
+.babel-terminal .bt-roll{display:grid;grid-template-columns:1fr auto;align-items:center;background:#202d204d;border-left:3px solid var(--accent);padding:18px 22px;margin:18px 0 28px;gap:8px 20px}
+.babel-terminal .bt-roll strong{grid-row:span 2;color:var(--accent);font-size:36px;font-weight:500}.babel-terminal .bt-roll span:last-child{font-size:12px;color:#aabc9e}
+.babel-terminal .bt-feedback{color:#edbb92;margin:0!important}
+.babel-terminal .bt-completion{color:#a4b09b;font-size:10px;white-space:nowrap;max-width:140px;overflow:hidden;text-overflow:ellipsis}
+.babel-terminal.fx::after{opacity:.09}
+@media(max-width:750px){
+ .babel-terminal:not(.cli) .bt-body{grid-template-rows:auto minmax(0,1fr)}
+ .babel-terminal:not(.cli) .bt-sidebar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:9px;border-right:0;border-bottom:1px solid #343c30}
+ .babel-terminal .bt-sidebar>p,.babel-terminal .bt-sidebar>small,.babel-terminal .bt-sidebar>.bt-spacer{display:none}
+ .babel-terminal .bt-sidebar button{font-size:10px;padding:6px;line-height:1.5}
+ .babel-terminal .bt-bottom>span:last-child{display:none}
+}
+.babel-terminal.panel .bt-command,.babel-terminal.panel .bt-history{display:none!important}
+.babel-terminal .bt-admin-actions,.babel-terminal .bt-mail-search{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.babel-terminal .bt-admin-card{padding:16px;border:1px solid #556054;margin:12px 0}
+.babel-terminal .bt-admin-card small{display:block;margin-top:8px}
+.babel-terminal .bt-editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.babel-terminal .bt-editor textarea{min-height:150px;white-space:pre-wrap}
+.babel-terminal .bt-editor-preview img{max-width:100%;max-height:500px;object-fit:contain}
+.babel-terminal .bt-mail-search label{flex:1;min-width:180px}
+.babel-terminal .bt-mail-search input{display:block;width:100%}
+.babel-terminal [hidden]{display:none!important}
+@media(max-width:700px){.babel-terminal .bt-editor-grid{grid-template-columns:1fr}}
+
+/* Foundry-scoped control fixes must follow the general input/button styles. */
+.babel-terminal .bt-form input[type=checkbox]{appearance:auto;-webkit-appearance:checkbox;flex:0 0 18px;align-self:center;width:18px;height:18px;min-height:18px;margin:0;padding:0;border:0;background:transparent;accent-color:var(--accent);transform:none;vertical-align:middle}
+.babel-terminal .bt-form input[type=checkbox]::before,.babel-terminal .bt-form input[type=checkbox]::after{content:none!important;display:none!important}
+.babel-terminal .bt-file>button{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;gap:2px;min-width:0;height:auto;white-space:normal}
+.babel-terminal .bt-file>button>br{display:none}
+.babel-terminal .bt-file>span{flex:0 0 auto}

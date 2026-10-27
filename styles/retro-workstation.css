@@ -1,0 +1,151 @@
+/* The case belongs to Babel's workstation, never to the rest of Foundry. */
+.babel-terminal .bt-device-strip{display:none}
+.babel-terminal:not(.cli){border:6px solid #343a2d;border-radius:12px;box-shadow:inset 0 0 0 1px #879077,0 0 0 1px #77816a,0 0 0 3px #171d16,0 16px 45px #0009;background:#09130b}
+.babel-foundry-window .babel-terminal:not(.cli){box-shadow:inset 0 0 0 1px #879077,0 0 0 1px #77816a}
+.babel-terminal:not(.cli) .bt-device-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none;min-height:28px;padding:4px 14px;background:linear-gradient(#3b4334,#2a3026);border-bottom:1px solid #111b12;color:#b9bea9;font-size:9px;line-height:1.5;letter-spacing:.12em;text-shadow:0 1px #1118;box-shadow:inset 0 1px #7f86604d}
+.babel-terminal .bt-device-name>span{color:#969f8a}
+.babel-terminal .bt-device-power{display:flex;align-items:center;gap:7px;flex:none;letter-spacing:.08em}
+.babel-terminal .bt-device-power i{width:5px;height:5px;display:block;background:#b9d594;border-radius:50%;box-shadow:0 0 4px #b9d59455}
+.babel-terminal:not(.cli) .bt-top{background:#111d13;min-height:36px;padding:8px 18px;border-bottom:1px solid #597247;box-shadow:inset 0 1px #070d09}
+.babel-terminal:not(.cli) .bt-top b{font-size:11px;letter-spacing:.12em}
+.babel-terminal:not(.cli) .bt-top small{font-size:9px;color:#9bb082}
+.babel-terminal:not(.cli) .bt-content{background:radial-gradient(ellipse at 50% 30%,#54723a12,transparent 80%),linear-gradient(110deg,#101e10,#08130d)}
+.babel-terminal:not(.cli).fx::before{content:'';position:absolute;inset:64px 0 0;pointer-events:none;z-index:4;background:radial-gradient(ellipse at 50% 45%,transparent 55%,#0004 100%),linear-gradient(115deg,#e5f9c003,transparent 40%)}
+.babel-terminal:not(.cli).fx::after{inset:28px 0 0;opacity:.055;background:repeating-linear-gradient(transparent 0,transparent 2px,#001900aa 3px)}
+.babel-terminal:not(.cli).fx :is(.bt-brand h1,.bt-mark,.bt-output h2,.bt-sidebar>button,.bt-file>button,.bt-game-bar,.bt-memory-word){text-shadow:0 0 5px #c6e6a51c}
+.babel-terminal:not(.cli).fx .bt-output [data-page-body]{text-shadow:0 0 3px #c6e6a514}
+.babel-terminal:not(.cli) .bt-bottom{background:#101e12;border-top:1px solid #51683d;color:#acbd8f}
+.babel-terminal:not(.cli) .bt-sidebar{background:linear-gradient(180deg,#162518,#0c170e)}
+.babel-terminal:not(.cli) .bt-file>span{font-variant-numeric:tabular-nums}
+@container babel (max-width:560px){
+ .babel-terminal:not(.cli){border-width:4px;border-radius:8px}
+ .babel-terminal:not(.cli) .bt-device-strip{padding:4px 9px;font-size:8px;letter-spacing:.04em}
+ .babel-terminal .bt-device-name>span{display:none}
+ .babel-terminal:not(.cli) .bt-top{padding:8px 10px}
+}
+@media(prefers-reduced-motion:reduce){.babel-terminal.fx::before{display:none}}
+
+/* Institutions share an OS, but keep different document signatures. */
+.babel-terminal .bt-brand-scope,.babel-terminal .bt-brand-watermark,.babel-terminal .bt-doc-stamp{display:none}
+.babel-terminal:not(.cli) .bt-brand{position:relative;flex-wrap:wrap;gap:16px;align-items:center;padding:8px 0 18px;margin-bottom:20px;min-height:92px;overflow:hidden}
+.babel-terminal:not(.cli) .bt-brand>div:not(.bt-brand-scope){flex:1;min-width:0;position:relative;z-index:1}
+.babel-terminal:not(.cli) .bt-brand h1{font-size:28px;letter-spacing:.11em;overflow-wrap:anywhere;line-height:1.2;margin-bottom:8px}
+.babel-terminal:not(.cli) .bt-brand .bt-mark{flex:none;position:relative;z-index:1;font-size:10px;padding:8px;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.babel-terminal:not(.cli) .bt-brand-scope{display:flex;flex-direction:column;gap:4px;position:relative;z-index:1;flex:0 1 190px;text-align:right;font-size:9px;letter-spacing:.1em;line-height:1.7;color:var(--accent)}
+.babel-terminal:not(.cli) .bt-brand-scope small{font-size:8px;color:var(--bt-muted);letter-spacing:.14em}
+.babel-terminal:not(.cli) .bt-brand-watermark{display:block;position:absolute;right:12px;top:0;margin:0;color:var(--accent);opacity:.045;pointer-events:none;font:16px/1.05 monospace;white-space:pre}
+.babel-terminal:not(.cli) .bt-doc-stamp{display:table;max-width:100%;font-size:9px;letter-spacing:.1em;line-height:1.7;color:var(--accent);padding:4px 10px;border:1px solid color-mix(in srgb,var(--accent) 50%,transparent);margin:0 0 20px;overflow-wrap:anywhere}
+.babel-terminal:not(.cli)[data-workstation=industrial] .bt-brand{border-bottom:3px double var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=industrial] .bt-brand .bt-mark{border:2px solid var(--accent);box-shadow:inset 0 0 0 3px #152014;outline:1px solid color-mix(in srgb,var(--accent) 30%,transparent);outline-offset:3px}
+.babel-terminal:not(.cli)[data-workstation=industrial] .bt-doc-stamp{border-left:5px solid var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=workshop] .bt-brand{border-bottom:2px dashed color-mix(in srgb,var(--accent) 60%,transparent)}
+.babel-terminal:not(.cli)[data-workstation=workshop] .bt-brand .bt-mark{border-style:dashed}
+.babel-terminal:not(.cli)[data-workstation=structural] .bt-brand{border-top:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-bottom:3px double var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=structural] .bt-brand h1{letter-spacing:.22em}
+.babel-terminal:not(.cli)[data-workstation=transit] .bt-brand{border-left:3px solid var(--accent);padding-left:14px}
+.babel-terminal:not(.cli)[data-workstation=transit] .bt-doc-stamp{border-top:0;border-right:0;border-left:3px solid var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=civic] .bt-brand .bt-mark{border-radius:50%;padding:12px}
+.babel-terminal:not(.cli)[data-workstation=civic] .bt-doc-stamp{border:3px double color-mix(in srgb,var(--accent) 65%,transparent)}
+.babel-terminal:not(.cli)[data-workstation=cultivation] .bt-brand{border-bottom:2px solid var(--accent);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 6%,transparent),transparent)}
+.babel-terminal:not(.cli)[data-workstation=cultivation] .bt-brand .bt-mark{border-radius:3px 18px 3px 18px}
+.babel-terminal:not(.cli)[data-workstation=signal] .bt-brand{border-bottom:1px dotted var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=signal] .bt-brand .bt-mark{border:0;border-left:1px solid var(--accent);border-right:1px solid var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=signal] .bt-doc-stamp{border-style:dotted}
+.babel-terminal:not(.cli)[data-workstation=research] .bt-brand{border-top:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-bottom:1px solid var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=research] .bt-brand .bt-mark{border:0;border-top:1px solid var(--accent);border-bottom:1px solid var(--accent)}
+.babel-terminal:not(.cli)[data-workstation=research] .bt-doc-stamp{border-right:0;border-left:0;font-size:8px;letter-spacing:.2em}
+
+/* Library tools stay local, but stop competing with the document list. */
+.babel-terminal:not(.cli) .bt-directory .bt-file{padding:5px 8px!important;gap:14px!important;min-height:40px}
+.babel-terminal:not(.cli) .bt-directory .bt-file>span{flex:0 0 44px;color:#90a879}
+.babel-terminal:not(.cli) .bt-directory .bt-file>button{padding:5px 8px;min-height:30px}
+.babel-terminal:not(.cli) .bt-directory .bt-file:hover{background:#9dbc7010}
+.babel-terminal:not(.cli) .bt-directory .bt-file>button:hover,.babel-terminal:not(.cli) .bt-directory .bt-file>button:focus-visible{background:#c3d99d;color:#102013;border-color:#c3d99d}
+.babel-terminal .bt-library-actions{align-items:flex-start;gap:10px}
+.babel-terminal .bt-library-tools{min-width:0;flex:0 1 380px;color:var(--accent);border:1px solid #506442;background:#122015}
+.babel-terminal .bt-library-tools>summary{padding:9px 12px;line-height:1.5;min-height:36px;font-size:11px;cursor:pointer;letter-spacing:.035em}
+.babel-terminal .bt-library-tools>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.babel-terminal .bt-library-tools[open]>summary{border-bottom:1px solid #506442;background:#1e301b}
+.babel-terminal .bt-tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px}
+.babel-terminal .bt-tools-grid>button{width:100%;text-align:left;font-size:10px}
+.babel-terminal .bt-library-actions>button{min-height:36px}
+.babel-terminal:not(.cli) .bt-mail-search{gap:8px;align-items:flex-end}
+.babel-terminal:not(.cli) .bt-mail-search label{font-size:11px;line-height:1.6}
+.babel-terminal:not(.cli) .bt-mail-search input{margin-top:5px}
+.babel-terminal:not(.cli) .bt-mail-item{padding:7px 8px!important;gap:14px!important}
+.babel-terminal:not(.cli) .bt-mail-item>button{min-height:36px;padding:6px 8px}
+@container babel (max-width:760px){
+ .babel-terminal:not(.cli) .bt-brand-scope{flex:1 0 100%;text-align:left;flex-direction:row;justify-content:space-between;gap:8px}
+ .babel-terminal:not(.cli) .bt-brand{min-height:0;gap:12px}
+ .babel-terminal:not(.cli) .bt-brand h1{font-size:24px}
+}
+@container babel (max-width:440px){
+ .babel-terminal:not(.cli) .bt-brand-scope{font-size:8px;flex-wrap:wrap}
+ .babel-terminal:not(.cli) .bt-brand .bt-mark{font-size:8px;padding:6px}
+ .babel-terminal:not(.cli) .bt-directory .bt-file{gap:6px!important;padding:5px 0!important}
+ .babel-terminal:not(.cli) .bt-directory .bt-file>span{flex-basis:32px}
+ .babel-terminal .bt-library-tools{flex-basis:100%}
+ .babel-terminal .bt-tools-grid{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Short, skippable presentation; no delayed controls or challenge clocks. */
+.babel-terminal .bt-workstation-boot{position:absolute;inset:64px 0 28px;z-index:9;background:#0a150ef5;display:grid;place-items:center;padding:24px}
+.babel-terminal .bt-startup-screen{width:min(500px,100%);padding:24px;border-top:1px solid #789358;border-bottom:1px solid #789358}
+.babel-terminal .bt-startup-screen h2{font:500 24px/1.5 'Babel Plex',monospace;letter-spacing:.12em;color:#d0e4ae;margin:8px 0 20px}
+.babel-terminal .bt-startup-screen pre{font:inherit;font-size:11px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;color:#b1ca95}
+.babel-terminal .bt-startup-screen button{font-size:10px;padding:6px 10px;margin-top:14px;color:var(--accent)}
+.babel-terminal .bt-startup-meter{height:5px;border:1px solid #56723d;overflow:hidden}
+.babel-terminal .bt-startup-meter>span{display:block;height:100%;background:#bddb96;animation:bt-station-ready 620ms steps(14,end) both}
+@keyframes bt-station-ready{from{width:0}to{width:100%}}
+.babel-terminal .bt-attachment-frame{background:radial-gradient(ellipse at 50% 40%,#24371b80,#07100b);border-color:#5d794b}
+.babel-terminal .bt-attachment-frame img{background:transparent}
+.babel-terminal .bt-attachment-scan{display:none;position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent);opacity:.6;pointer-events:none;box-shadow:0 -8px 25px color-mix(in srgb,var(--accent) 25%,transparent)}
+.babel-terminal .bt-attachment-frame.rendering .bt-attachment-scan{display:block}
+.babel-terminal.reduce .bt-attachment-scan{display:none}
+@container babel (max-width:440px){.babel-terminal .bt-workstation-boot{padding:12px}.babel-terminal .bt-startup-screen{padding:16px 8px}.babel-terminal .bt-startup-screen h2{font-size:19px}}
+
+/* Memory dump instead of a dashboard: decorative bytes are not hidden bonuses. */
+.babel-terminal .bt-game-dashboard{border-top:1px solid #45663e;border-bottom:1px solid #45663e;background:#09140d;gap:16px;padding:9px 0;margin:0 0 20px}
+.babel-terminal .bt-game-dashboard>div{border:0;border-right:1px dashed #395237;background:transparent;padding:3px 14px;gap:4px}
+.babel-terminal .bt-game-dashboard>div:last-child{border-right:0}
+.babel-terminal .bt-game-dashboard strong{font-size:24px;letter-spacing:.08em}
+.babel-terminal .bt-game-workspace{grid-template-columns:minmax(0,1fr) 270px;gap:20px}
+.babel-terminal .bt-game-memory,.babel-terminal .bt-game-feedback{border:0;background:transparent}
+.babel-terminal .bt-game-bar{background:#102011;border-top:1px solid #658a4c;border-bottom:1px solid #658a4c;padding:8px 10px}
+.babel-terminal .bt-game .bt-puzzle-words{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:14px 8px 16px;margin:0;border:0}
+.babel-terminal .bt-game .bt-puzzle-words>.bt-memory-column{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0}
+.babel-terminal .bt-memory-row,.babel-terminal .bt-memory-filler{display:flex;align-items:center;gap:0;min-width:0;min-height:26px;font-size:12px;line-height:1.8;white-space:nowrap}
+.babel-terminal .bt-game .bt-puzzle-words .bt-memory-address,.babel-terminal .bt-memory-filler>span:first-child{flex:0 0 7.5ch;color:#7f9c77;font-size:10px;letter-spacing:.02em}
+.babel-terminal .bt-game .bt-puzzle-words .bt-memory-noise{font-size:11px;letter-spacing:.03em;color:#6f8d67;flex:0 0 4.3ch}
+.babel-terminal .bt-game .bt-puzzle-words .bt-memory-word{min-height:26px;font-size:14px;font-weight:500;line-height:1.4;letter-spacing:.04em;padding:2px 3px;color:#c0e49d;border:1px solid transparent;background:transparent;flex:none}
+.babel-terminal:not(.cli) .bt-game .bt-puzzle-words button.bt-memory-word{min-height:26px;padding:2px 3px}
+.babel-terminal .bt-game .bt-puzzle-words .bt-memory-word:hover,.babel-terminal .bt-game .bt-puzzle-words .bt-memory-word:focus-visible{background:#c0e49d;color:#0b180e;border-color:#c0e49d;text-shadow:none}
+.babel-terminal .bt-memory-filler>span:last-child{font-size:11px;letter-spacing:.03em;color:#65865d}
+.babel-terminal .bt-memory-row>small{margin-left:4px;color:#a9bc96}
+.babel-terminal .bt-game .bt-puzzle-words .bt-tried{opacity:.65}
+.babel-terminal .bt-game .bt-game-howto{padding:10px 8px 0;font-size:11px}
+.babel-terminal .bt-game .bt-game-command{padding:9px 8px;border-top:1px solid #395236}
+.babel-terminal .bt-game .bt-game-response{padding:12px 8px;min-height:66px;font-size:12px;color:#badd95}
+.babel-terminal .bt-game-response>span{font-size:10px;line-height:1.7}
+.babel-terminal .bt-game-response strong{display:inline;font-size:12px;color:#d1e9ac;margin-left:6px}
+.babel-terminal .bt-game .bt-guess-log{padding:0 8px;margin:0 0 14px;gap:7px}
+.babel-terminal .bt-game .bt-guess-log li{gap:8px}
+.babel-terminal .bt-guess-number{font-size:9px;color:#7f9c77;flex:none}
+.babel-terminal .bt-letter-word{grid-template-columns:repeat(6,22px);gap:2px}
+.babel-terminal .bt-letter{width:22px;height:26px;font-size:13px;border-color:transparent;background:#152517}
+.babel-terminal .bt-letter.correct{color:#09150d;border-color:#c0e49d;background:#c0e49d}
+.babel-terminal .bt-game-legend{padding:12px 8px;border-top-style:solid}
+.babel-terminal .bt-game-feedback>.bt-muted{padding:0 8px}
+.babel-terminal.fx:not(.reduce) .bt-game-memory::after{animation:bt-memory-scan 3s linear 1;opacity:.6}
+@container babel (max-width:900px){
+ .babel-terminal .bt-game-workspace{grid-template-columns:minmax(0,1fr);gap:16px}
+ .babel-terminal .bt-game-feedback{border-top:1px solid #395236}
+ .babel-terminal .bt-game .bt-guess-log{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container babel (max-width:560px){
+ .babel-terminal .bt-game .bt-puzzle-words{grid-template-columns:minmax(0,1fr);gap:12px;padding:12px 4px}
+ .babel-terminal .bt-game .bt-guess-log{grid-template-columns:minmax(0,1fr)}
+ .babel-terminal .bt-game-dashboard{gap:8px;margin-bottom:14px}
+ .babel-terminal .bt-game-dashboard>div{padding:3px 8px}
+}
+@media(prefers-reduced-motion:reduce){.babel-terminal .bt-startup-meter>span,.babel-terminal .bt-game-memory::after{animation:none!important}.babel-terminal .bt-attachment-scan{display:none}}
