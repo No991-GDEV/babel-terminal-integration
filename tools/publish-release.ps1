@@ -56,7 +56,13 @@ if ($Publish) {
     Run-Native 'git' @('push','origin',"refs/tags/$tag")
     if ($existing.Count -eq 0) { Run-Native $GitHubCli @('release','create',$tag,'--repo',$repository,'--verify-tag','--draft','--title',('Babel Terminal Integration '+$manifest.version),'--notes-file','CHANGELOG.md') }
     Run-Native $GitHubCli @('release','upload',$tag,(Join-Path $releaseRoot 'module.json'),$zipPath,(Join-Path $releaseRoot 'SHA256SUMS.txt'),'--repo',$repository,'--clobber')
-    $remoteRelease = (& $GitHubCli api "repos/$repository/releases/tags/$tag" | Out-String) | ConvertFrom-Json
+    # The by-tag REST endpoint returns published releases only. Resolve draft IDs from the authenticated list.
+    $drafts = (& $GitHubCli api "repos/$repository/releases?per_page=100" | Out-String) | ConvertFrom-Json
+    if ($LASTEXITCODE -ne 0) { throw 'Não foi possível conferir o rascunho enviado.' }
+    $draftMatch = @($drafts | Where-Object { $_.tag_name -eq $tag })
+    if ($draftMatch.Count -ne 1 -or -not $draftMatch[0].draft) { throw 'Rascunho ausente ou já publicado; nenhum asset será alterado.' }
+    $draftReleaseId = $draftMatch[0].id
+    $remoteRelease = (& $GitHubCli api "repos/$repository/releases/$draftReleaseId" | Out-String) | ConvertFrom-Json
     if ($LASTEXITCODE -ne 0 -or -not $remoteRelease.draft) { throw 'A release não está em rascunho; pare antes de alterar assets.' }
     foreach ($name in @('module.json','babel-terminal-integration.zip','SHA256SUMS.txt')) {
         $localPath = Join-Path $releaseRoot $name
